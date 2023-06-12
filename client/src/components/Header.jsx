@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-gradient-to-l from-[#014737] to-[#7B1FA2] relative">
+      <header className="bg-gradient-to-r from-[#11998e] to-[#38ef7d] relative">
         <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="flex items-center relative z-10">
