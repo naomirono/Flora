@@ -3,7 +3,7 @@ import HeroVideo from '../assets/hero.mp4'
 
 const Hero = () => {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center">
+    <section id='home' className="relative h-[80vh] flex items-center justify-center">
       <div className="video-container absolute top-0 left-0 w-full h-full">
         <video className="w-full h-full object-cover" autoPlay muted loop>
           <source src={HeroVideo} type="video/mp4" />
