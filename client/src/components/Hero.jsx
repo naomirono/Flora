@@ -1,15 +1,11 @@
 import React from 'react';
-import HeroVideo from '../assets/hero.mp4'
+import backgroundImage from '../assets/hero1.png'
 
 const Hero = () => {
   return (
-    <section id='home' className="relative h-[80vh] flex items-center justify-center">
-      <div className="video-container absolute top-0 left-0 w-full h-full">
-        <video className="w-full h-full object-cover" autoPlay muted loop>
-          <source src={HeroVideo} type="video/mp4" />
-        </video>
-        <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
-      </div>
+    <section id="home" className="relative h-[89vh] flex items-center justify-center">
+      <div className="background-image absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+      <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
       <div className="container mx-auto text-center relative z-10">
         <h1 className="text-white text-4xl font-bold mb-4">
           Planting Trees for a Greener Future
