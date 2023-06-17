@@ -10,16 +10,16 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-gradient-to-r from-[#1D976C] to-[#38ef7d] relative z-10">
+      <header className="bg-[#BCF0DA] relative z-10">
         <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="flex items-center relative ">
               <div className="flex-shrink-0">
-                <h2 className="text-4xl text-white">Flora</h2>
+                <h2 className="text-4xl text-green-900">Flora</h2>
               </div>
               <div
                 onClick={toggleMenu}
-                className="text-white focus:outline-none text-3xl md:hidden flex justify-end items-center ml-12 mt-2"
+                className="text-green-900 focus:outline-none text-3xl md:hidden flex justify-end items-center ml-12 mt-2"
               >
                 {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
               </div>
@@ -32,35 +32,35 @@ const Header = () => {
               <a
                 href="#home"
                 onClick={toggleMenu}
-                className="block font-medium text-white hover:text-gray-100 px-6 py-6 rounded-md text-lg "
+                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg "
               >
                 Home
               </a>
               <a
                 href="#about"
                 onClick={toggleMenu}
-                className="block font-medium text-white hover:text-gray-100 px-6 py-6 rounded-md text-lg"
+                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
               >
                 About
               </a>
               <a
                 href="#impact"
                 onClick={toggleMenu}
-                className="block font-medium text-white hover:text-gray-100 px-6 py-6 rounded-md text-lg"
+                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
               >
                 Impact
               </a>
               <a
                 href="#contact"
                 onClick={toggleMenu}
-                className="block font-medium text-white hover:text-gray-100 px-6 py-6 rounded-md text-lg"
+                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
               >
                 Contact
               </a>
               <a
                 href="#FAQ"
                 onClick={toggleMenu}
-                className="block font-medium text-white hover:text-gray-100 px-6 py-6 rounded-md text-lg"
+                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
               >
                 FAQ
               </a>
