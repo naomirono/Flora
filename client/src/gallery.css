@@ -1,9 +1,9 @@
 .gallery {
-    --s: 50px; /* control the slanted part */
+    --s: 70px; /* control the slanted part */
     
     display: grid;
     height: 230px;
-    gap: 8px;
+    gap: 10px;
     grid-auto-flow: column;
     place-items: center;
   }
