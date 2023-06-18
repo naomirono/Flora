@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectsSection = () => {
+const Projects = () => {
   const projects = [
     {
       title: 'Urban Reforestation',
@@ -40,4 +40,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default Projects;
