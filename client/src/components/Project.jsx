@@ -1,5 +1,6 @@
 import React from 'react';
 import UrbanReforestationImage from '../assets/hero1.png'
+import Gallery from './Gallery';
 
 const Projects = () => {
   const projects = [
@@ -37,6 +38,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      <Gallery/>
     </section>
   );
 };
