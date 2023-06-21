@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/hero1.png'
+import Image from '../assets/hero1.png'
 import aboutVideo from '../assets/about.mp4'
 
 const About = () => {
@@ -9,15 +9,10 @@ const About = () => {
         <div className="md:w-1/2">
           <div className="relative">
             <img
-              src={backgroundImage}
+              src={Image}
               alt="Image 1"
               className="w-full"
             />
-            {/* <img
-              src={backgroundImage}
-              alt="Image 2"
-              className="w-5/6 absolute bottom-0 right-0 mr-[-10%] mb-[-10%] rounded-bl-[48px]"
-            /> */}
              <video
               className="w-5/6 absolute bottom-0 right-0 mr-[-10%] mb-[-17%]"
               autoPlay
