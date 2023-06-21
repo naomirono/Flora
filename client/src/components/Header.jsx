@@ -19,7 +19,7 @@ const Header = () => {
               </div>
               <div
                 onClick={toggleMenu}
-                className="text-green-900 focus:outline-none text-3xl md:hidden flex justify-end items-center ml-12 mt-2"
+                className="text-green-900 focus:outline-none text-3xl md:hidden flex justify-end items-center ml-48 mt-2"
               >
                 {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
               </div>
@@ -27,40 +27,50 @@ const Header = () => {
             <div
               className={`${
                 isMenuOpen ? 'block' : 'hidden'
-              } mt-4 sm:mt-0 md:flex md:items-center bg-black bg-opacity-90 md:bg-transparent absolute md:relative top-full md:top-auto left-0 w-full md:w-auto md:z-0 z-20 md:pt-0 py-4 transition-all duration-500 ease-in text-center `}
+              } mt-4 sm:mt-0 md:flex md:items-center bg-black md:bg-transparent absolute md:relative top-full md:top-auto left-0 w-full md:w-auto md:z-0 z-20 md:pt-0 py-4 transition-all duration-500 ease-in text-center `}
             >
               <a
                 href="#home"
                 onClick={toggleMenu}
-                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg "
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-white' : 'text-green-900'
+                } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Home
               </a>
               <a
                 href="#about"
                 onClick={toggleMenu}
-                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-white' : 'text-green-900'
+                } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 About
               </a>
               <a
                 href="#impact"
                 onClick={toggleMenu}
-                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-white' : 'text-green-900'
+                } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Impact
               </a>
               <a
                 href="#contact"
                 onClick={toggleMenu}
-                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-white' : 'text-green-900'
+                } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Contact
               </a>
               <a
                 href="#FAQ"
                 onClick={toggleMenu}
-                className="block font-medium text-green-900 hover:text-black px-6 py-6 rounded-md text-lg"
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-white' : 'text-green-900'
+                } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 FAQ
               </a>
