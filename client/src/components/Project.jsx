@@ -1,5 +1,7 @@
 import React from 'react';
-import UrbanReforestationImage from '../assets/hero1.png'
+import Urban from '../assets/urban.JPG'
+import Community from '../assets/community.JPG'
+import School from '../assets/school.JPG'
 import Gallery from './Gallery';
 
 const Projects = () => {
@@ -7,17 +9,17 @@ const Projects = () => {
     {
       title: 'Urban Reforestation',
       description: 'Help us transform urban areas by planting trees in parks, neighborhoods, and public spaces. Together, we can create greener and healthier cities for everyone to enjoy.',
-      image: UrbanReforestationImage,
+      image: Urban,
     },
     {
       title: 'Community Forests',
       description: 'Join our efforts to establish community-managed forests that provide sustainable livelihoods, protect biodiversity, and preserve natural resources for future generations.',
-      image: UrbanReforestationImage,
+      image: Community,
     },
     {
       title: 'School Tree Planting',
       description: 'Engage students and promote environmental education by organizing tree planting activities in schools. Together, let\'s nurture the next generation of environmental stewards.',
-      image: UrbanReforestationImage,
+      image: School,
     },
   ];
 
@@ -37,8 +39,8 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        <Gallery/>
       </div>
-      <Gallery/>
     </section>
   );
 };
