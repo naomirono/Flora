@@ -4,7 +4,7 @@ import aboutVideo from '../assets/about.mp4'
 
 const About = () => {
   return (
-    <section className="py-14 md:py-20 max-w-[1100px] mx-auto">
+    <section id="about" className="py-14 md:py-20 max-w-[1100px] mx-auto">
       <div className="container mx-auto md:my-8 md:px-4 lg:px-0 px-4">
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2">
