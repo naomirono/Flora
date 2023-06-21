@@ -48,7 +48,7 @@ const Header = () => {
                 About
               </a>
               <a
-                href="#impact"
+                href="#projects"
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-white' : 'text-green-900'
@@ -66,7 +66,7 @@ const Header = () => {
                 Contact
               </a>
               <a
-                href="#FAQ"
+                href="#donate"
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-white' : 'text-green-900'
