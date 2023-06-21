@@ -3,7 +3,7 @@ import CallToAction from './CallToAction';
 
 const Donate = () => {
   return (
-    <div>
+    <div id="donate">
       
       <CallToAction
         title="Donate to Support Tree Planting"
