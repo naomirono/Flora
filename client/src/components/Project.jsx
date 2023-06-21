@@ -24,7 +24,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="home" className="py-12">
+    <section id="projects" className="py-12">
       <div className="container mx-auto max-w-[1100px]">
         <h2 className="text-4xl font-bold mb-8 text-center"> <span className='text-green-900'>Projects </span>and <span className='text-green-900'>Initiatives</span> </h2>
         <div className="grid gap-8 md:grid-cols-3">
