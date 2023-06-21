@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="home" className="relative h-[70vh] md:h-[89vh] flex items-center justify-center">
       <div className="background-image absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
-      <div className="container mx-auto text-center relative z-10">
+      <div className="container mx-auto text-center relative ">
         <h1 className="text-white text-4xl font-bold mb-4">
           Planting Trees for a Greener Future
         </h1>
