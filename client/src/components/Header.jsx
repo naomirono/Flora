@@ -33,7 +33,7 @@ const Header = () => {
                 href="#home"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-white' : 'text-green-900'
+                  isMenuOpen ? 'text-green-900' : 'text-white'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Home
@@ -42,7 +42,7 @@ const Header = () => {
                 href="#about"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-white' : 'text-green-900'
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 About
@@ -51,7 +51,7 @@ const Header = () => {
                 href="#projects"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-white' : 'text-green-900'
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Projects
@@ -60,7 +60,7 @@ const Header = () => {
                 href="#contact"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-white' : 'text-green-900'
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Contact
@@ -69,7 +69,7 @@ const Header = () => {
                 href="#donate"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-white' : 'text-green-900'
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Donate
