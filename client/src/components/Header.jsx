@@ -54,7 +54,7 @@ const Header = () => {
                   isMenuOpen ? 'text-white' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
-                Impact
+                Projects
               </a>
               <a
                 href="#contact"
@@ -72,7 +72,7 @@ const Header = () => {
                   isMenuOpen ? 'text-white' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
-                FAQ
+                Donate
               </a>
             </div>
           </div>
