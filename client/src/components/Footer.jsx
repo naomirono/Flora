@@ -6,18 +6,18 @@ const Footer = () => {
     <footer className="py-6 bg-green-900">
   <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center max-w-[1200px]">
     <div className="mb-4 sm:mb-0 hidden sm:block">
-    <h2 className="text-4xl text-white hover:text-green-500">Flora</h2>
+    <h2 className="text-4xl text-white hover:text-black">Flora</h2>
     </div>
     <div className="text-white sm:ml-4">
       <ul className="flex flex-wrap space-x-6">
         <li>
-          <a href="/privacy-policy" className="text-white hover:text-green-500">Privacy Policy</a>
+          <a href="/privacy-policy" className="text-white hover:text-black">Privacy Policy</a>
         </li>
         <li>
-          <a href="/terms-of-service" className="text-white hover:text-green-500">Terms of Service</a>
+          <a href="/terms-of-service" className="text-white hover:text-black">Terms of Service</a>
         </li>
         <li>
-          <a href="/affiliations" className="text-white hover:text-green-500">Affiliations</a>
+          <a href="/affiliations" className="text-white hover:text-black">Affiliations</a>
         </li>
       
       </ul>
