@@ -33,7 +33,7 @@ const Header = () => {
                 href="#home"
                 onClick={toggleMenu}
                 className={`block font-medium ${
-                  isMenuOpen ? 'text-green-900' : 'text-white'
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-6 rounded-md text-lg`}
               >
                 Home
