@@ -6,6 +6,7 @@ import Mission from './components/Mission';
 import Projects from './components/Project';
 import Donate from './components/Donate';
 import TreeStatistics from './components/TreeStatistics';
+import News from './components/News';// 
 import Footer from './components/Footer';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Projects/>
       <Donate/>
       <TreeStatistics/>
+      <News/>
       <Footer/>
     </div>
     </>
