@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
       <div className="container mx-auto text-center relative max-w-[1000px] ">
         <h1 className="text-white text-4xl font-bold mb-10">
-          Planting Trees for a Greener Future
+          Planting Trees for a Greener Future.
         </h1>
         <p className="text-white text-lg mb-8">
           Join us in our mission to restore the environment and combat climate change through tree planting initiatives. Together, we can make a significant impact on the planet by promoting sustainability, preserving biodiversity, and creating healthier ecosystems for future generations.
