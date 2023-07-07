@@ -15,7 +15,7 @@ const Header = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="flex items-center relative ">
               <div className="flex-shrink-0">
-                <h2 className="text-4xl text-green-900">Flora</h2>
+                <h2 className="text-4xl text-green-900">TreeHaven</h2>
               </div>
               <div
                 onClick={toggleMenu}
