@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="overlay absolute inset-0 bg-black opacity-70"></div>
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center max-w-[1200px]">
         <div className="mb-4 sm:mb-0 hidden sm:block z-10 relative">
-          <h2 className="text-4xl text-white hover:text-green-500">Flora</h2>
+          <h2 className="text-4xl text-white hover:text-green-500">TreeHaven</h2>
         </div>
         <div className="text-white sm:ml-4 z-10 relative">
           <ul className="flex flex-wrap space-x-6">
