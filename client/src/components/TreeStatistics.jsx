@@ -23,7 +23,7 @@ const TreeStatistics = () => {
   return (
     <section className="py-8">
       <div className="container mx-auto px-4 max-w-[1100px]">
-        <h2 className="text-4xl text-gray-800 font-semibold mt-4 text-center">Tree Planting <span className='text-green-900'>Statistics</span></h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mt-4 text-center">Tree Planting <span className='text-green-900'>Statistics</span></h2>
         <div className="flex">
           <div className="w-1/2">
             <VictoryChart
