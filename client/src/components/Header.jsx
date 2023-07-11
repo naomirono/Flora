@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import Donate from './Donate';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="flex items-center relative ">
               <div className="flex-shrink-0">
-                <h2 className="text-4xl text-green-900">TreeHaven</h2>
+                <h2 className="text-4xl text-green-900 font-bold">TreeHaven</h2>
               </div>
               <div
                 onClick={toggleMenu}
@@ -68,9 +69,9 @@ const Header = () => {
               <a
                 href="#donate"
                 onClick={toggleMenu}
-                className={`block font-medium ${
-                  isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-6 rounded-md text-lg`}
+                className={`block font-medium rounded-full border border-white bg-green-900 ${
+                  isMenuOpen ? 'text-white' : 'text-white'
+                } hover:text-black px-6 py-2 rounded-full text-lg`}
               >
                 Donate
               </a>
