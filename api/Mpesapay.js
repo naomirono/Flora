@@ -1,83 +1,45 @@
-const express = require('express');
-const axios = require('axios');
-const bodyParser = require('body-parser');
+const express = require ('express');
 
+ 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+const port = 3000;
+ 
+// app.use(bodyParser.json());
 
-// Mpesa API credentials
-const consumerKey = 'YOUR_CONSUMER_KEY';
-const consumerSecret = 'YOUR_CONSUMER_SECRET';
-const baseUrl = 'https://api.safaricom.co.ke';
-
-// Generate access token
-const generateAccessToken = async () => {
-  const auth = Buffer.from(`${consumerKey}:${consumerSecret}`).toString('base64');
-  const config = {
-    headers: {
-      Authorization: `Basic ${auth}`,
-      'Content-Type': 'application/json',
-    },
-  };
-
-  try {
-    const response = await axios.get(`${baseUrl}/oauth/v1/generate?grant_type=client_credentials`, config);
-    return response.data.access_token;
-  } catch (error) {
-    console.error('Failed to generate access token:', error.response.data);
-    throw error;
-  }
-};
-
-// Make Mpesa STK push request
-const makeStkPushRequest = async (accessToken, phoneNumber, amount, description) => {
-  const payload = {
-    BusinessShortCode: 'YOUR_BUSINESS_SHORTCODE',
-    Password: 'YOUR_PASSWORD',
-    Timestamp: 'YOUR_TIMESTAMP',
-    TransactionType: 'CustomerPayBillOnline',
-    Amount: amount,
-    PartyA: phoneNumber,
-    PartyB: 'YOUR_BUSINESS_SHORTCODE',
-    PhoneNumber: phoneNumber,
-    CallBackURL: 'YOUR_CALLBACK_URL',
-    AccountReference: 'YOUR_ACCOUNT_REFERENCE',
-    TransactionDesc: description,
-  };
-
-  const config = {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-      'Content-Type': 'application/json',
-    },
-  };
-
-  try {
-    const response = await axios.post(`${baseUrl}/mpesa/stkpush/v1/processrequest`, payload, config);
-    return response.data;
-  } catch (error) {
-    console.error('Failed to make STK push request:', error.response.data);
-    throw error;
-  }
-};
-
-// Handle donation request
-app.post('/donation', async (req, res) => {
-  const { phoneNumber, amount, description } = req.body;
-
-  try {
-    const accessToken = await generateAccessToken();
-    const stkPushResponse = await makeStkPushRequest(accessToken, phoneNumber, amount, description);
-
-    // Handle the stkPushResponse and send the appropriate response to the client
-    res.json({ result: stkPushResponse });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+app.post('/callback', (req, res) => {
+  const paymentData = req.body;
+ 
+  // Format the payment data using the FormatPaymentData helper method
+  const { status, resultCode, message, data: paymentdata } = FormatPaymentData(paymentData);
+ 
+  // Process the payment based on the status
+  if (status === 'success') {
+    // Save the payment data to the database
+    // Replace the code below with your actual database logic
+    // Example using MongoDB and Mongoose
+    const Payment = require('./models/payment'); // Import your Payment model
+    const newPayment = new Payment(paymentdata);
+    newPayment.save()
+      .then((savedPayment) => {
+        console.log('Payment data saved:', savedPayment);
+        res.sendStatus(200);
+      })
+      .catch((error) => {
+        console.error('Error saving payment data:', error);
+        res.sendStatus(500);
+      });
+  } else if (status === 'canceled') {
+    console.log('Payment canceled:', message);
+    res.sendStatus(200);
+  } else if (status === 'failed') {
+    console.log('Payment failed:', message);
+    res.sendStatus(200);
+  } else {
+    console.log('Invalid payment status');
+    res.sendStatus(400);
   }
 });
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
