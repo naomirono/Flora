@@ -81,16 +81,15 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={` font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-2 py-2 rounded-md text-lg`}
+                } px-2 py-2`}
               >
                 <DonateButton />  
               </a>
               <a
-                href="#donate"
                 onClick={toggleMenu}
                 className={` font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-2 py-2 rounded-md text-lg`}
+                } px-2 py-2`}
               >
                 <DonateButton />
               </a>
