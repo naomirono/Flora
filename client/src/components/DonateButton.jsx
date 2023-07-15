@@ -33,7 +33,7 @@ const DonateButton = () => {
 
   return (
     <button
-      className="bg-green-900 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white"
+      className="bg-green-900 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white hover:text-green-900 hover:bg-white hover:border-green-900"
       onClick={handleDonateClick}
       disabled={loading}
     >
