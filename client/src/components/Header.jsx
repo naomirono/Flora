@@ -35,7 +35,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-6 rounded-md text-lg`}
+                } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
               >
                 Home
               </a>
@@ -44,7 +44,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-6 rounded-md text-lg`}
+                } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
               >
                 About
               </a>
@@ -53,7 +53,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-6 rounded-md text-lg`}
+                } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
               >
                 Projects
               </a>
@@ -62,7 +62,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-6 rounded-md text-lg`}
+                } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
               >
                 Contact
               </a>
@@ -71,7 +71,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-2 rounded-md text-lg`}
+                } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
               >
                 Blog
               </a>
@@ -81,7 +81,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={` font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-2 rounded-md text-lg`}
+                } hover:text-black px-2 py-2 rounded-md text-lg`}
               >
                 <DonateButton />  
               </a>
@@ -90,7 +90,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 className={` font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } hover:text-black px-6 py-2 rounded-md text-lg`}
+                } hover:text-black px-2 py-2 rounded-md text-lg`}
               >
                 <DonateButton />
               </a>
