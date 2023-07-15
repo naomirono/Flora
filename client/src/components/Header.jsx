@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import Donate from './Donate';
+import DonateButton from './DonateButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
               </div>
               <div
                 onClick={toggleMenu}
-                className="text-green-900 focus:outline-none text-3xl md:hidden flex justify-end items-center ml-48 mt-2"
+                className="text-green-900 focus:outline-none text-3xl md:hidden flex justify-end items-center ml-[100px] my-4"
               >
                 {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
               </div>
@@ -69,13 +69,33 @@ const Header = () => {
               <a
                 href="#donate"
                 onClick={toggleMenu}
-                className={`block font-medium rounded-full border border-white bg-green-900 ${
-                  isMenuOpen ? 'text-white' : 'text-white'
-                } hover:text-black px-6 py-2 rounded-full text-lg`}
+                className={`block font-medium ${
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
+                } hover:text-black px-6 py-2 rounded-md text-lg`}
               >
-                Donate
+                Blog
               </a>
             </div>
+            <div className='md:block hidden'>
+            <a
+                onClick={toggleMenu}
+                className={` font-medium ${
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
+                } hover:text-black px-6 py-2 rounded-md text-lg`}
+              >
+                <DonateButton />  
+              </a>
+              <a
+                href="#donate"
+                onClick={toggleMenu}
+                className={` font-medium ${
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
+                } hover:text-black px-6 py-2 rounded-md text-lg`}
+              >
+                <DonateButton />
+              </a>
+            </div>
+            
           </div>
         </nav>
       </header>
