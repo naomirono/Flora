@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
-
 const stripePromise = loadStripe('pk_test_51N9pFiDotCtyPckPQclsuxSOsulIBPbrqX69TxXAfbw1teutdVHSlhSypBWKOHXPfwq4oiA6R0FlhzXkgQf7FbsA00BSpiFNyf');
 
-const DonateButton = () => {
+const DonateButton = ({ text }) => {
   const [loading, setLoading] = useState(false);
 
   const handleDonateClick = async () => {
@@ -33,13 +32,13 @@ const DonateButton = () => {
 
   return (
     <button
-      className="bg-green-900 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white hover:text-green-900 hover:bg-white hover:border-green-900"
+      className="bg-[#006600] text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white hover:text-green-900 hover:bg-white hover:border-green-900"
       onClick={handleDonateClick}
       disabled={loading}
     >
-      {loading ? 'Processing...' : 'Donate Now'}
+      {loading ? 'Processing...' : text}
     </button>
   );
 };
 
-export default DonateButton
+export default DonateButton;
