@@ -83,7 +83,7 @@ const Header = () => {
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } px-2 py-2`}
               >
-                <DonateButton />  
+                <DonateButton text="Donate Now" />  
               </a>
               <a
                 onClick={toggleMenu}
@@ -91,7 +91,7 @@ const Header = () => {
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } px-2 py-2`}
               >
-                <DonateButton />
+                <DonateButton text="mpesapay"/>
               </a>
             </div>
             
