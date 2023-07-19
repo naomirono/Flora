@@ -26,7 +26,7 @@ app.post('/donation', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://127.0.0.1:5173',
+      success_url: 'http://localhost:5173',
       cancel_url: 'https://yourwebsite.com/cancel',
     });
 
