@@ -11,7 +11,7 @@ const About = () => {
             <div className="relative">
               <img
                 src={Image}
-                alt="Image 1"
+                alt="Image"
                 className="w-full md:max-w-md"
               />
               <video
