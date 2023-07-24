@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       <div className="border-t border-white mt-4 max-w-[1200px] mx-auto z-10 relative"></div>
       <div className="container mx-auto pt-4 text-center text-white text-sm z-10 relative">
-        &copy; {new Date().getFullYear()} Flora. All rights reserved.
+        &copy; {new Date().getFullYear()} TreeHaven. All rights reserved.
       </div>
     </footer>
   );
