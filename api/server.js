@@ -58,7 +58,7 @@ app.post('/donation', async (req, res) => {
               name: 'Donation',
               description: 'Your contribution can make a difference in restoring our planet. Help us plant more trees and combat climate change.',
             },
-            unit_amount: 5 * 100, // Amount in cents
+            unit_amount: 10 * 100, // Amount in cents
           },
           quantity: 1,
         },
