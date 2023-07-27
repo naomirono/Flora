@@ -24,7 +24,7 @@ const blogSchema = new mongoose.Schema({
 const BlogPost = mongoose.model('BlogPost', blogSchema);
 
 // API Endpoints for Blog Posts
-app.get('/api/blog', async (req, res) => {
+app.get('/blog', async (req, res) => {
   try {
     const blogData = await BlogPost.find();
     res.json(blogData);
@@ -33,7 +33,7 @@ app.get('/api/blog', async (req, res) => {
   }
 });
 
-app.post('/api/blog', async (req, res) => {
+app.post('/blog', async (req, res) => {
   try {
     const newPost = req.body;
     await BlogPost.create(newPost);
