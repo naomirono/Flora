@@ -3,6 +3,7 @@ import { FaEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaInstagram } from 'reac
 import Image from '../assets/donation.jpg'
 
 const ContactSection = () => {
+    
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
