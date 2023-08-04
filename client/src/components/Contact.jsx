@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import Image from '../assets/donation.jpg'
+import Image from '../assets/hero1.png'
 
 const ContactSection = () => {
     
