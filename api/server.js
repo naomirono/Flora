@@ -7,8 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Enable CORS for all routes
 
+
 // MongoDB Connection
-const mongoURI = 'mongodb://localhost:27017/cms'; // Replace with your MongoDB connection string
+const mongoURI = 'mongodb+srv://neyobluezkayleezshiks:Y50sdDMCMITkZdId@cluster1.hy5ijms.mongodb.net/yourdatabasename?retryWrites=true&w=majority';
+
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB:', err));
