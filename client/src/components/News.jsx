@@ -7,7 +7,7 @@ const News = () => {
 
   useEffect(() => {
     // Fetch blog data from backend API
-    axios.get('http://localhost:3000/api/blog') // Replace with your backend URL
+    axios.get('http://localhost:3000/blog') // Replace with your backend URL
       .then((response) => {
         setBlogData(response.data);
       })
