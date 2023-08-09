@@ -6,8 +6,7 @@ const News = () => {
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
-    // Fetch blog data from backend API
-    axios.get('http://localhost:3000/blog') // Replace with your backend URL
+    axios.get('http://localhost:3000/blog')
       .then((response) => {
         setBlogData(response.data);
       })
@@ -23,8 +22,8 @@ const News = () => {
           Blog <span className='text-green-900'>Posts</span>
         </h2>
         <div className="grid gap-8 md:grid-cols-3">
-          {blogData.map((post, index) => (
-            <NewsPost key={index} post={post} />
+          {blogData.map((post) => (
+            <NewsPost key={post._id} post={post} />
           ))}
         </div>
       </div>
