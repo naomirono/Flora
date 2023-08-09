@@ -5,11 +5,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 app.use(express.json());
-app.use(cors()); // Enable CORS for all routes
-
+app.use(cors());
 
 // MongoDB Connection
-const mongoURI = 'mongodb+srv://neyobluezkayleezshiks:Y50sdDMCMITkZdId@cluster1.hy5ijms.mongodb.net/yourdatabasename?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://neyobluezkayleezshiks:Y50sdDMCMITkZdId@cluster1.hy5ijms.mongodb.net/Blog?retryWrites=true&w=majority';
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
@@ -23,25 +22,26 @@ const blogSchema = new mongoose.Schema({
   image: String,
 });
 
-const BlogPost = mongoose.model('BlogPost', blogSchema);
+const Posts = mongoose.model('Posts', blogSchema);
+
+// CORS Configuration
+const corsOptions = {
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions));
 
 // API Endpoints for Blog Posts
 app.get('/blog', async (req, res) => {
   try {
-    const blogData = await BlogPost.find();
+    const blogData = await Posts.find();
+    console.log('Fetched blog data:', blogData); // Add this line for debugging
     res.json(blogData);
   } catch (err) {
-    res.status(500).json({ error: 'Error fetching blog data' });
-  }
-});
-
-app.post('/blog', async (req, res) => {
-  try {
-    const newPost = req.body;
-    await BlogPost.create(newPost);
-    res.json({ message: 'Blog post added successfully' });
-  } catch (err) {
-    res.status(500).json({ error: 'Error adding blog post' });
+    console.error('Error fetching blog data:', err); // Add this line for debugging
+    res.status(500).json({ error: 'Error fetching blog data', details: err.message });
   }
 });
 
