@@ -24,14 +24,6 @@ const blogSchema = new mongoose.Schema({
 
 const Posts = mongoose.model('Posts', blogSchema);
 
-// CORS Configuration
-const corsOptions = {
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
-  methods: 'GET,POST',
-  allowedHeaders: 'Content-Type',
-};
-
-app.use(cors(corsOptions));
 
 // API Endpoints for Blog Posts
 app.get('/blog', async (req, res) => {
@@ -66,11 +58,11 @@ app.post('/donation', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://localhost:5173/success', // Replace with your frontend success URL
-      cancel_url: 'http://localhost:5173/cancel', // Replace with your frontend cancel URL
+      success_url: 'http://127.0.0.1:5173', // Replace with your frontend success URL
+      cancel_url: 'http://127.0.0.1:5173', // Replace with your frontend cancel URL
     });
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173'); // Replace with your frontend's origin
+    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5173'); // Replace with your frontend's origin
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST'); // Adjust the allowed HTTP methods if needed
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Adjust the allowed headers if needed
 
