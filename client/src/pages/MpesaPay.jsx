@@ -22,7 +22,7 @@ const MpesaPay = () => {
 
     return (
         <div
-        className="bg-gray-100 min-h-screen flex items-center justify-center"
+        className="bg-black min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
