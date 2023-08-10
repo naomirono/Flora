@@ -20,7 +20,15 @@ const MpesaPay = () => {
     };
 
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div
+        className="bg-gray-100 min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.8, // Set the desired opacity
+        }}
+      >
             <div className="bg-white p-8 rounded shadow-md w-96">
                 <h2 className="text-xl font-semibold mb-4">M-Pesa Payment Integration</h2>
                 <div className="mb-4">
