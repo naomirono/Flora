@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import backgroundImage from '../assets/hero1.png';
 
 const MpesaPay = () => {
     const [amount, setAmount] = useState('');
