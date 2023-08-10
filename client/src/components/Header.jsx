@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import DonateButton from './DonateButton';
+import MpesaButton from './MpesaButton';
+import MpesaPay from '../pages/MpesaPay';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +14,9 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-green-100 relative z-10">
-        <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
+      <Router> {/* Wrap your app with Router */}
+        <header className="bg-green-100 relative z-10">
+          <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="flex items-center relative ">
               <div className="flex-shrink-0">
@@ -77,6 +81,7 @@ const Header = () => {
               </a>
             </div>
             <div className='md:block hidden'>
+
             <a
                 onClick={toggleMenu}
                 className={` font-medium ${
@@ -85,19 +90,28 @@ const Header = () => {
               >
                 <DonateButton text="Donate Now" />  
               </a>
-              <a
-                onClick={toggleMenu}
-                className={` font-medium ${
-                  isMenuOpen ? 'text-green-900' : 'text-green-900'
-                } px-2 py-2`}
-              >
-                <DonateButton text="mpesapay"/>
-              </a>
+              
+              
+                <a
+                  onClick={toggleMenu}
+                  className={` font-medium ${
+                    isMenuOpen ? 'text-green-900' : 'text-green-900'
+                  } px-2 py-2`}
+                >
+                  <MpesaButton text="Mpesa Pay" to="/mpesapay"/>
+                </a>
+              
             </div>
-            
           </div>
         </nav>
       </header>
+
+      {/* Define your routes */}
+      
+      <Routes>
+        <Route path="/mpesapay" element={<MpesaPay />} />
+      </Routes>
+     </Router>
     </div>
   );
 };
