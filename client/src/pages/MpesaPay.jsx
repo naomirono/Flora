@@ -42,7 +42,7 @@ const MpesaPay = () => {
                     />
                 </div>
                 <button
-                    className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300"
+                    className="w-full bg-[#006600] text-white py-2 rounded hover:bg-blue-600 transition duration-300"
                     onClick={handlePayment}
                 >
                     M-Pesa Pay
