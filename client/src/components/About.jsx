@@ -27,7 +27,7 @@ const About = () => {
           <div className="md:w-1/2 mt-8 md:mt-0 md:ml-20">
             <h2 className="text-4xl font-bold mb-4 text-center">About <span className='text-green-900'>  TreeHaven </span> </h2>
             <p className="text-lg">
-              Ourr tree planting website is dedicated to making a positive impact on the environment and combating climate change. We believe that planting trees is a powerful way to restore ecosystems, sequester carbon dioxide, and create sustainable habitats for various species. With our mission to promote reforestation and environmental conservation, we strive to raise awareness about the importance of trees and inspire individuals to take action. By getting involved with our initiatives, you can contribute to creating a greener future for generations to come. Together, we can make a significant difference in preserving our planet's natural beauty and safeguarding its biodiversity.
+              Ourrr tree planting website is dedicated to making a positive impact on the environment and combating climate change. We believe that planting trees is a powerful way to restore ecosystems, sequester carbon dioxide, and create sustainable habitats for various species. With our mission to promote reforestation and environmental conservation, we strive to raise awareness about the importance of trees and inspire individuals to take action. By getting involved with our initiatives, you can contribute to creating a greener future for generations to come. Together, we can make a significant difference in preserving our planet's natural beauty and safeguarding its biodiversity.
             </p>
           </div>
         </div>
