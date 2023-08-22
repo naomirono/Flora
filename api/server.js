@@ -3,12 +3,14 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 app.use(express.json());
 app.use(cors());
 
 // MongoDB Connection
-const mongoURI = 'mongodb+srv://neyobluezkayleezshiks:Y50sdDMCMITkZdId@cluster1.hy5ijms.mongodb.net/Blog?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
