@@ -31,10 +31,8 @@ const Posts = mongoose.model('Posts', blogSchema);
 app.get('/blog', async (req, res) => {
   try {
     const blogData = await Posts.find();
-    console.log('Fetched blog data:', blogData); // Add this line for debugging
     res.json(blogData);
   } catch (err) {
-    console.error('Error fetching blog data:', err); // Add this line for debugging
     res.status(500).json({ error: 'Error fetching blog data', details: err.message });
   }
 });
@@ -60,13 +58,13 @@ app.post('/donation', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://127.0.0.1:5173', // Replace with your frontend success URL
-      cancel_url: 'http://127.0.0.1:5173', // Replace with your frontend cancel URL
+      success_url: 'http://127.0.0.1:5173', 
+      cancel_url: 'http://127.0.0.1:5173',
     });
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5173'); // Replace with your frontend's origin
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST'); // Adjust the allowed HTTP methods if needed
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Adjust the allowed headers if needed
+    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5173'); 
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST'); 
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); 
 
     res.json({ id: session.id });
   } catch (err) {
@@ -82,8 +80,7 @@ app.get('/cancel', (req, res) => {
   res.send('Payment canceled.');
 });
 
-// Start the server
-const PORT = 3000; // Choose any available port
+const PORT = 3000; 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
