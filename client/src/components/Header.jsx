@@ -4,6 +4,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import DonateButton from './DonateButton';
 import MpesaButton from './MpesaButton';
 import MpesaPay from '../pages/MpesaPay';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
 
   return (
     <div>
-      <Router> {/* Wrap your app with Router */}
+      {/* Wrap your app with Router */}
         <header className="bg-green-100 relative z-10">
           <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -92,14 +93,15 @@ const Header = () => {
               </a>
               
               
-                <a
-                  onClick={toggleMenu}
-                  className={` font-medium ${
-                    isMenuOpen ? 'text-green-900' : 'text-green-900'
-                  } px-2 py-2`}
-                >
-                  <MpesaButton text="Mpesa Pay" to="/mpesapay"/>
-                </a>
+              <Link
+                to="/mpesapay"
+                className={` font-medium ${
+                  isMenuOpen ? 'text-green-900' : 'text-green-900'
+                } px-2 py-2`}
+              >
+                <MpesaButton text="Mpesa Pay" to="/mpesapay" />
+              </Link>
+
               
             </div>
           </div>
@@ -108,10 +110,7 @@ const Header = () => {
 
       {/* Define your routes */}
       
-      <Routes>
-        <Route path="/mpesapay" element={<MpesaPay />} />
-      </Routes>
-     </Router>
+    
     </div>
   );
 };
