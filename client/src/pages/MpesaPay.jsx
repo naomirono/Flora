@@ -39,7 +39,6 @@ const MpesaPay = () => {
                             type="number"
                             className="w-full border rounded px-3 py-2 outline-none focus:border-blue-500"
                             value={amount}
-                            placeholder="kes 100"
                             onChange={(e) => setAmount(e.target.value)}
                         />
                     </div>
