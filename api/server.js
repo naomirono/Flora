@@ -40,7 +40,7 @@ app.get('/blog', async (req, res) => {
 });
 
 // Donation Payment with Stripe
-const stripe = require('stripe')('sk_test_51N9pFiDotCtyPckPygs3a7nWC7RypeIJ55aAqHDkNyYZTz0FYdpahi1piYpzrDMj5XN3rhHobivq6RFlyvAjae5m002qEpztp1');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 app.post('/donation', async (req, res) => {
   try {
