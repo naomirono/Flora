@@ -25,7 +25,12 @@ const TreeStatistics = () => {
       <div className="container mx-auto px-4 max-w-[1100px]">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mt-4 text-center">Tree Planting <span className='text-green-900'>Statistics</span></h2>
         <div className="flex">
-          <div className="w-1/2">
+        <div className="w-1/2">
+            <p className="text-lg text-gray-700 mt-16">
+              Welcome to our tree planting journey! This graph showcases our impressive tree planting achievements over the years, highlighting our commitment to environmental sustainability. From the year 2019 to 2022, our dedicated efforts have resulted in the planting of a remarkable number of trees. In 2019, we planted 1,000 trees, and our dedication only grew from there. The following year, 2020, saw a significant leap with 2,500 trees planted. Undeterred by challenges, in 2021, we furthered our impact by planting 4,000 trees. Our proudest achievement yet was in 2022, where a remarkable 6,000 trees found their home in the earth. These statistics represent more than just numbers; they symbolize our shared commitment to preserving and enriching the environment. As we move forward, we remain steadfast in our mission, continuing to plant and nurture trees for a greener and healthier planet.
+            </p>
+          </div>
+          <div className="w-1/2 ml-10">
             <VictoryChart
               theme={VictoryTheme.material}
               domainPadding={20}
@@ -51,36 +56,6 @@ const TreeStatistics = () => {
                 y="treesPlanted"
                 style={{
                   data: { fill: '#014737' },
-                }}
-              />
-            </VictoryChart>
-          </div>
-          <div className="w-1/2 ml-6">
-            <VictoryChart
-              theme={VictoryTheme.material}
-              domainPadding={20}
-            >
-              <VictoryAxis
-                tickFormat={formatYearTick}
-                style={{
-                  axis: { stroke: '#718096' },
-                  tickLabels: { fontSize: 10, fill: '#718096' },
-                }}
-              />
-              <VictoryAxis
-                dependentAxis
-                tickFormat={(tick) => `${tick}`}
-                style={{
-                  axis: { stroke: '#718096' },
-                  tickLabels: { fontSize: 10, fill: '#718096' },
-                }}
-              />
-              <VictoryLine
-                data={graphData}
-                x="year"
-                y="treesPlanted"
-                style={{
-                  data: { stroke: '#014737' },
                 }}
               />
             </VictoryChart>
