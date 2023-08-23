@@ -31,23 +31,27 @@ const TreeStatistics = () => {
             </p>
           </div>
           <div className="w-1/2 ml-10">
-            <VictoryChart
+          <VictoryChart
               theme={VictoryTheme.material}
               domainPadding={20}
             >
               <VictoryAxis
                 dependentAxis
                 tickFormat={(tick) => `${tick}`}
+                label="Trees Planted"
                 style={{
                   axis: { stroke: '#718096' },
                   tickLabels: { fontSize: 10, fill: '#718096' },
+                  axisLabel: { fontSize: 12, padding: 40, fill: '#718096' },
                 }}
               />
               <VictoryAxis
                 tickFormat={formatYearTick}
+                label="Year"
                 style={{
                   axis: { stroke: '#718096' },
                   tickLabels: { fontSize: 10, fill: '#718096' },
+                  axisLabel: { fontSize: 12, padding: 30, fill: '#718096' },
                 }}
               />
               <VictoryBar
