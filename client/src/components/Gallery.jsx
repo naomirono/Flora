@@ -8,11 +8,11 @@ import Image4 from '../assets/p3.JPG';
 import Image5 from '../assets/p5.JPG';
 
 const Gallery = () => {
-  const isSmallDevice = useMediaQuery({ maxWidth: 767 }); // Define the breakpoint for small devices
+  const isSmallDevice = useMediaQuery({ maxWidth: 767 }); 
 
   const images = isSmallDevice
-    ? [Image1, Image2, Image4] // Display 3 images on small devices
-    : [Image1, Image2, Image3, Image4, Image5]; // Display all 5 images on medium and larger devices
+    ? [Image1, Image2, Image4] 
+    : [Image1, Image2, Image3, Image4, Image5];
 
   return (
     <div className="gallery py-4 px-2 md:px-4">
