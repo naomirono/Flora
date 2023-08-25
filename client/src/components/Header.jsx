@@ -15,7 +15,6 @@ const Header = () => {
 
   return (
     <div>
-      {/* Wrap your app with Router */}
         <header className="bg-green-100 relative z-10">
           <nav className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -107,10 +106,6 @@ const Header = () => {
           </div>
         </nav>
       </header>
-
-      {/* Define your routes */}
-      
-    
     </div>
   );
 };
