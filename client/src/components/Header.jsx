@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import DonateButton from './DonateButton';
 import MpesaButton from './MpesaButton';
-import MpesaPay from '../pages/MpesaPay';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
