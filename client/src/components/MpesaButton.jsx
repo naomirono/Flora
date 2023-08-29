@@ -16,7 +16,7 @@ const MpesaButton = ({ text, to }) => {
   return (
     <Link to={to}>
       <button
-        className="bg-[#006600] text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white hover:text-green-900 hover:bg-white hover:border-green-900"
+        className="bg-[#006600] text-white font-semibold py-2 px-4 rounded-full shadow-lg transition-colors duration-300 border border-white hover:text-green-900 hover:bg-white hover:border-green-900 ml-4"
         onClick={handleMpesaClick}
         disabled={loading}
       >
