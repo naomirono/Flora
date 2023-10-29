@@ -2,12 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const app = express();
+const axios = require('axios');
+const moment = require('moment');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
+const app = express();
+
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 // MongoDB Connection
 const mongoURI = process.env.MONGODB_URI;
@@ -58,8 +62,8 @@ app.post('/donation', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://127.0.0.1:5173', 
-      cancel_url: 'http://127.0.0.1:5173',
+      success_url: 'http://127.0.0.1:5173/success',
+      cancel_url: 'http://127.0.0.1:5173/cancel',
     });
 
     res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5173'); 
