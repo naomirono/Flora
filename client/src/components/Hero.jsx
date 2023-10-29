@@ -1,6 +1,16 @@
 import React from 'react';
 import backgroundImage from '../assets/hero1.png';
 
+const scrollToAbout = () => {
+  const aboutSection = document.getElementById('about');
+  if (aboutSection) {
+    window.scrollTo({
+      top: aboutSection.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+};
+
 const Hero = () => {
   return (
     <section id="home" className="relative h-[70vh] md:h-[89vh] flex items-center justify-center">
@@ -13,7 +23,7 @@ const Hero = () => {
         <p className="text-white text-lg mb-8">
           Join us in our mission to restore the environment and combat climate change through tree planting initiatives. Together, we can make a significant impact on the planet by promoting sustainability, preserving biodiversity, and creating healthier ecosystems for future generations.
         </p>
-        <button className="bg-white text-green-900 rounded-md px-6 py-3 font-bold hover:bg-green-100 mt-[90px]">
+        <button className="bg-white text-green-900 rounded-md px-6 py-3 font-bold hover:bg-green-100 mt-[90px]" onClick={scrollToAbout}>
           Get Involved
         </button>
       </div>
