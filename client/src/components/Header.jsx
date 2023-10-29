@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import DonateButton from './DonateButton';
-import MpesaButton from './MpesaButton';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -34,7 +42,10 @@ const Header = () => {
             >
               <a
                 href="#home"
-                onClick={toggleMenu}
+                onClick={() => {
+                  scrollToSection('home');
+                  toggleMenu();
+                }}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
@@ -43,7 +54,10 @@ const Header = () => {
               </a>
               <a
                 href="#about"
-                onClick={toggleMenu}
+                onClick={() => {
+                  scrollToSection('about');
+                  toggleMenu();
+                }}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
@@ -52,7 +66,10 @@ const Header = () => {
               </a>
               <a
                 href="#projects"
-                onClick={toggleMenu}
+                onClick={() => {
+                  scrollToSection('projects');
+                  toggleMenu();
+                }}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
@@ -61,7 +78,10 @@ const Header = () => {
               </a>
               <a
                 href="#contact"
-                onClick={toggleMenu}
+                onClick={() => {
+                  scrollToSection('contact');
+                  toggleMenu();
+                }}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
@@ -69,8 +89,11 @@ const Header = () => {
                 Contact
               </a>
               <a
-                href="#donate"
-                onClick={toggleMenu}
+                href="#blog"
+                onClick={() => {
+                  scrollToSection('blog');
+                  toggleMenu();
+                }}
                 className={`block font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } hover:text-black px-6 py-2 rounded-md text-lg mt-6`}
@@ -90,14 +113,14 @@ const Header = () => {
               </a>
               
               
-              <Link
-                to="/mpesapay"
+              <a
+                onClick={toggleMenu}
                 className={` font-medium ${
                   isMenuOpen ? 'text-green-900' : 'text-green-900'
                 } px-2 py-2`}
               >
-                <MpesaButton text="Mpesa Pay" to="/mpesapay" />
-              </Link>
+                <DonateButton text="MpesaPay" />  
+              </a>
 
               
             </div>
