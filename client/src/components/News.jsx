@@ -16,7 +16,7 @@ const News = () => {
   }, []);
 
   return (
-    <section className="py-12">
+    <section id='blog' className="py-12">
       <div className="container mx-auto max-w-[1100px]">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
           Blog <span className='text-green-900'>Posts</span>
