@@ -11,7 +11,7 @@ const DonateButton = ({ text }) => {
 
     const stripe = await stripePromise;
 
-    const response = await fetch('http://localhost:3000/donation', {
+    const response = await fetch('https://us-central1-travel-wanderlust-neyo.cloudfunctions.net/app/donation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
