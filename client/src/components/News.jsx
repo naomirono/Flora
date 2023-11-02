@@ -6,7 +6,7 @@ const News = () => {
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/blog')
+    axios.get('https://us-central1-travel-wanderlust-neyo.cloudfunctions.net/app/blog')
       .then((response) => {
         setBlogData(response.data);
       })
